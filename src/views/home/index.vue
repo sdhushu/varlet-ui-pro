@@ -1,12 +1,11 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <router-view />
+  <div>home</div>
 </template>
 
 <style>
-#app {
-  height: 100vh;
-}
+
 </style>
