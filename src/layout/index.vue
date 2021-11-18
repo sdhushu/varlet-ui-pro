@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import tabBar from '../router/tabBar'
+import tabBar from '@/router/tabBar'
 import { useRouter } from 'vue-router'
 
 const menuList = tabBar.children
