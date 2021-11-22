@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@master
+        uses: wearerequired/git-mirror-action@master 
         env:
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_TOKEN }}
         with:
