@@ -12,8 +12,8 @@ jobs:
 
       - name: Sync to Gitee
         uses: wearerequired/git-mirror-action@master 
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_TOKEN }}
         with:
+          dst_token:  ${{ secrets.GITEE_TOKEN }}
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           source-repo: git@github.com:qytayh/varlet-ui-pro.git
           destination-repo: git@gitee.com:qytayh/varlet-ui-pro.git
