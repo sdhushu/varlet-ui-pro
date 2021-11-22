@@ -11,17 +11,17 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Sync to Gitee
-        uses: Yikun/hub-mirror-action@v1.1
-        #env:
-         # SSH_PRIVATE_KEY: ${{ secrets.GITEE_TOKEN }}
+        uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_TOKEN }}
           # dst_token:  ${{ secrets.GITEE_TOKEN }}
           # dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         with:
-          src: github/qytayh
-          dst: gitee/qytayh
-          dst_token:  ${{ secrets.GITEE_TOKEN }}
-          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          clone_style: "ssh"
-          static_list: "varlet-ui-pro"
-          #source-repo: git@github.com:qytayh/varlet-ui-pro.git
-          #destination-repo: git@gitee.com:qytayh/varlet-ui-pro.git
+          #src: github/qytayh
+          #dst: gitee/qytayh
+          #dst_token:  ${{ secrets.GITEE_TOKEN }}
+          #dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          #clone_style: "ssh"
+          #static_list: "varlet-ui-pro"
+          source-repo: git@github.com:qytayh/varlet-ui-pro.git
+          destination-repo: git@gitee.com:qytayh/varlet-ui-pro.git
