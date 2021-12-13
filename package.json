@@ -7,7 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@varlet/ui": "^1.23.0-alpha.30",
+    "@varlet/ui": "^1.23.11",
     "pinia": "^2.0.3",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"
