@@ -1,7 +1,7 @@
 const Components = require('unplugin-vue-components/webpack')
 const { VarletUIResolver } = require('unplugin-vue-components/resolvers')
 module.exports = {
-    outputDir: "dist/varlet-ui-pro",
+    publicPath: "./",
     configureWebpack: {
         plugins: [
             Components({
