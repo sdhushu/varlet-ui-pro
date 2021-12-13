@@ -10,20 +10,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      with:
-        node-version: '14.x'
+        with:
+          node-version: '14.x'
 
-        - name: Install dependencies
-          run: yarn
+      - name: Install dependencies
+        run: yarn
 
-        - name: Build site
-          run: yarn build
+      - name: Build site
+        run: yarn build
 
-        - name: Deploy site
-          uses: JamesIves/github-pages-deploy-action@4.1.1
-          with:
-            branch: gh-page
-            folder: packages/dist
+      - name: Deploy site
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-page
+          folder: packages/dist
 
       - name: Sync to Gitee
         uses: wearerequired/git-mirror-action@master
