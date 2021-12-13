@@ -17,9 +17,7 @@ jobs:
         run: yarn
 
       - name: Build site
-        run: |
-        yarn build
-        cp index.html 404.html
+        run: yarn build
 
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@4.1.1
