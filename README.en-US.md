@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://varlet.gitee.io/varlet-ui/">
+  <a href="http://qytayh.gitee.io/varlet-ui-pro/">
     <img src="https://github.com/qytayh/varlet-ui-pro/blob/main/public/logo.png?raw=true" width="150">
   </a>
   <h1>VARLET-UI-PRO</h1>
@@ -20,7 +20,7 @@
 
 ### Intro
 
-[varlet-ui-pro](https://github.com/qytayh/varlet-ui-pro)  is a mobile integrated development scheme developed based on `Vue3` and Material design component library  [varlet](https://varlet.gitee.io/varlet-ui/)
+[varlet-ui-pro](http://qytayh.gitee.io/varlet-ui-pro/)  is a mobile integrated development scheme developed based on `Vue3` and Material design component library  [varlet](https://varlet.gitee.io/varlet-ui/)
 , developed and maintained by partners in the community.
 
 ### How to use

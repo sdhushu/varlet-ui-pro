@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://varlet.gitee.io/varlet-ui/">
+  <a href="http://qytayh.gitee.io/varlet-ui-pro/">
     <img src="https://github.com/qytayh/varlet-ui-pro/blob/main/public/logo.png?raw=true" width="150">
   </a>
   <h1>VARLET-UI-PRO</h1>
@@ -20,7 +20,7 @@
 
 ### 介绍
 
-[varlet-ui-pro](https://github.com/qytayh/varlet-ui-pro) 是一个基于Vue3和Material风格移动端组件库 [varlet](https://varlet.gitee.io/varlet-ui/) 开发的移动端集成方案，全面拥抱Vue3生态，由社区建立起来的开发团队进行维护。
+[varlet-ui-pro](http://qytayh.gitee.io/varlet-ui-pro/) 是一个基于Vue3和Material风格移动端组件库 [varlet](https://varlet.gitee.io/varlet-ui/) 开发的移动端集成方案，全面拥抱Vue3生态，由社区建立起来的开发团队进行维护。
 
 ### 使用方法 
 

@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import dark from '@varlet/ui/es/themes/dark'
 import { StyleProvider } from '@varlet/ui'
-let current = null
+let current = $ref(null)
 const changeMode = () => {
-  console.log(11)
   current = current?null:dark
   StyleProvider(current)
 }
