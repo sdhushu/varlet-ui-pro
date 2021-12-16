@@ -3,9 +3,10 @@
 import { RouteRecordRaw } from 'vue-router'
 
 
-const files = import.meta.globEager('../views/demo/**/*.vue')
+const files = import.meta.globEager('../views/demo/***/*.vue')
 
 let demo: Array<RouteRecordRaw> = []
+
 
 for (let key in files) {
   let path = key.replace(/(\..\/views\/demo\/|\.vue)/g, '')

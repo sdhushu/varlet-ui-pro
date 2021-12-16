@@ -1,0 +1,10 @@
+{
+  "header": {
+    "i18n": {
+      "zh-CN": "中文",
+      "en-US": "English"
+    },
+    "github": "https://github.com/qytayh/varlet-ui-pro",
+    "darkMode": true
+  }
+}

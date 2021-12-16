@@ -5,8 +5,16 @@ const tabBar: RouteRecordRaw = {
   path: '/',
   name: 'index',
   component: Layout,
-  redirect: '/home',
+  redirect: '/demo',
   children: [
+    {
+      path:'/demo',
+      component:()=>import('../views/demo/index.vue'),
+      meta: {
+        icon: 'home-outline',
+        title: 'demo',
+      },
+    },
     {
       path: '/home',
       name: 'home',
