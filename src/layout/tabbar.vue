@@ -2,11 +2,12 @@
 import tabBar from '@/router/tabBar'
 import { useRouter } from 'vue-router'
 
+
 const menuList = tabBar.children
 const router = useRouter()
 let active = $ref(0)
 
-const routeTo = (path) => {
+const routeTo = (path:string) => {
   router.push(path)
 }
 </script>

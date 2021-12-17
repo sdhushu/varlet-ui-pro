@@ -4,11 +4,13 @@
       "zh-CN": "中文",
       "en-US": "English"
     },
-    "title": {
-      "zh-CN": "一个免费的基于varlet-ui的移动端集成方案。",
-      "en-US": "A free varlet-ui integrated development scheme."
-    },
-    "logo": "https://qytayh.gitee.io/varlet-ui-pro/varlet_pro_logo.png",
+
+    "logo": "https://qytayh.github.io/varlet-ui-pro/varlet_pro_logo.png",
     "github": "https://github.com/qytayh/varlet-ui-pro"
+  },
+  "title": "VARLET-UI-PRO",
+  "description": {
+    "zh-CN": "一个免费的基于varlet-ui的移动端集成方案。",
+    "en-US": "A free varlet-ui integrated development scheme."
   }
 }

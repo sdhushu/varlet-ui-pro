@@ -1,18 +1,19 @@
 import { RouteRecordRaw } from 'vue-router'
-import Layout from '../layout/index.vue'
+import Tabbar from '../layout/tabbar.vue'
 
 const tabBar: RouteRecordRaw = {
   path: '/',
   name: 'index',
-  component: Layout,
+  component: Tabbar,
   redirect: '/example',
   children: [
     {
       path:'/example',
       component:()=>import('../views/example/index.vue'),
       meta: {
-        icon: 'home-outline',
-        title: 'demo',
+        icon: 'notebook',
+        title: 'example',
+        theme:'purple'
       },
     },
     {
