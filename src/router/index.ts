@@ -3,11 +3,7 @@ import tabBar from './tabBar'
 import pages from './pages'
 import example from './example'
 
-// import theme from '@/static/theme'
-//
-// import { StyleProvider } from '@varlet/ui'
-
-
+import {useSystemStore} from '@/store/system'
 
 const routes = [tabBar, ...pages, ...example]
 
@@ -16,10 +12,10 @@ const router = createRouter({
   routes: routes,
 })
 
-// router.beforeEach((to, from, next)=>{
-//   let pageTheme = to?.meta?.theme as string || ''
-//   StyleProvider(pageTheme?theme[pageTheme]:null)
-//   next();
-// })
+router.beforeEach((to, from, next)=>{
+  const system = useSystemStore()
+  system.changePageTheme( to.meta?.theme as string || '')
+  next();
+})
 
 export default router

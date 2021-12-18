@@ -7,8 +7,8 @@ const system = useSystemStore()
 
 const {header,title,description} = config as Record<string, any>
 const { github,logo,i18n } = header
-import { StyleProvider } from '@varlet/ui'
-import dark from '@varlet/ui/es/themes/dark'
+
+
 import { computed } from 'vue'
 import router from '@/router'
 let showMenu = $ref(false)
@@ -16,7 +16,11 @@ let showMenu = $ref(false)
 const lang = computed(()=> system.lang)
 
 const languages = i18n
-let darkMode:Record<string, string> | null = $ref(null)
+const darkMode = computed(()=>{
+  return system.getTheme === 'dark'
+})
+
+
 const toGithub = () => {
     window.location.href = github
 }
@@ -26,8 +30,7 @@ const changeLanguage = (lang:string)=>{
   showMenu = false
 }
 const toggleTheme = () => {
-  darkMode = darkMode ? null : dark
-  StyleProvider(darkMode)
+  system.changeDarkTheme()
 }
 
 const exampleList = computed(()=>{

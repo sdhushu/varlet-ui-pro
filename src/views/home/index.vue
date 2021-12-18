@@ -10,7 +10,7 @@ const changeMode = () => {
 
 <template>
   <div>home</div>
-  <var-button @click='changeMode'>test dark</var-button>
+  <var-button type='primary' @click='changeMode'>test dark</var-button>
 </template>
 
 <style>

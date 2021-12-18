@@ -14,7 +14,7 @@ for (let key in files) {
   example.push({
     path:`/example/${fileName}`,
     name: fileName,
-    component: () => import(/* @vite-ignore */ key),
+    component: files[key],
     meta:{
       theme:'purple'
     }

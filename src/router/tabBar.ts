@@ -23,6 +23,7 @@ const tabBar: RouteRecordRaw = {
       meta: {
         icon: 'home-outline',
         title: '首页',
+        theme: 'seaGreen'
       },
     },
     {
