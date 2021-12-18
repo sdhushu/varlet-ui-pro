@@ -2,6 +2,7 @@
 import config from '@/static/config.json'
 import {useSystemStore} from '@/store/system'
 import { pack,use } from './locale'
+import exampleList from  '@/router/example'
 
 const system = useSystemStore()
 
@@ -33,11 +34,11 @@ const toggleTheme = () => {
   system.changeDarkTheme()
 }
 
-const exampleList = computed(()=>{
-  return router.getRoutes().filter(v=>{
-    return v.path.includes(('/example/'))
-  })
-})
+// const exampleList = computed(()=>{
+//   return router.getRoutes().filter(v=>{
+//     return v.path.includes(('/example/'))
+//   })
+// })
 
 const toExample = (path:string)=>{
   router.push(path)

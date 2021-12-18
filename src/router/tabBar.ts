@@ -9,6 +9,7 @@ const tabBar: RouteRecordRaw = {
   children: [
     {
       path:'/example',
+      name:'example',
       component:()=>import('../views/example/index.vue'),
       meta: {
         icon: 'notebook',

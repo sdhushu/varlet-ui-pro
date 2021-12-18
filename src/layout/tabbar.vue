@@ -5,7 +5,8 @@ import { useRouter } from 'vue-router'
 
 const menuList = tabBar.children
 const router = useRouter()
-let active = $ref(0)
+
+let active = $ref(router.currentRoute.value.name)
 
 const routeTo = (path:string) => {
   router.push(path)
@@ -22,7 +23,7 @@ const routeTo = (path:string) => {
     fixed-bottom
     indicator-color="#00000000"
   >
-    <var-tab v-for="v in menuList" :key="v.name" @click="routeTo(v.path)">
+    <var-tab v-for="v in menuList" :name='v.name' :key="v.name" @click="routeTo(v.path)">
       <var-icon class="icon" :name="v.meta.icon" />
       <div>{{ v.meta.title }}</div>
     </var-tab>
