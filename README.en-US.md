@@ -1,6 +1,6 @@
 <div align="center">
   <a href="http://qytayh.gitee.io/varlet-ui-pro/">
-    <img src="https://github.com/qytayh/varlet-ui-pro/varlet_pro_logo.png?raw=true" width="150">
+    <img src="https://qytayh.github.io/varlet-ui-pro/varlet_pro_logo.png?raw=true" width="150">
   </a>
   <h1>VARLET-UI-PRO</h1>
   <p>A free varlet-ui integrated development scheme.</p>
