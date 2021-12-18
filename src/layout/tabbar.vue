@@ -2,7 +2,6 @@
 import tabBar from '@/router/tabBar'
 import { useRouter } from 'vue-router'
 
-
 const menuList = tabBar.children
 const router = useRouter()
 
