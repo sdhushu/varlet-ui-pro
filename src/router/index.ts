@@ -5,7 +5,7 @@ import example from './example'
 
 import {useSystemStore} from '@/store/system'
 
-const routes = [tabBar, ...pages, ...example]
+const routes = [tabBar, ...pages, example]
 
 const router = createRouter({
   history: createWebHashHistory(),

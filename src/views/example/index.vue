@@ -1,91 +1,63 @@
-<script setup lang='ts' >
+<script setup lang="ts">
 import config from '@/static/config.json'
-import {useSystemStore} from '@/store/system'
-import { pack,use } from './locale'
-import exampleList from  '@/router/example'
+import { useSystemStore } from '@/store/system'
+import { pack, use } from './locale'
+import { computed } from 'vue'
+import router from '@/router'
+import example from '@/router/example'
+const { header, title, description } = config as Record<string, any>
+
+const exampleList = computed(() => {
+  return example.children
+})
 
 const system = useSystemStore()
 
-const {header,title,description} = config as Record<string, any>
-const { github,logo,i18n } = header
+const { github, logo, i18n } = header
 
-
-import { computed } from 'vue'
-import router from '@/router'
 let showMenu = $ref(false)
 
-const lang = computed(()=> system.lang)
+const lang = computed(() => system.lang)
 
 const languages = i18n
-const darkMode = computed(()=>{
+
+const darkMode = computed(() => {
   return system.getTheme === 'dark'
 })
 
-
 const toGithub = () => {
-    window.location.href = github
+  window.location.href = github
 }
-const changeLanguage = (lang:string)=>{
+const changeLanguage = (lang: string) => {
   system.changeLang(lang)
   use(lang)
   showMenu = false
 }
+
 const toggleTheme = () => {
   system.changeDarkTheme()
 }
 
-// const exampleList = computed(()=>{
-//   return router.getRoutes().filter(v=>{
-//     return v.path.includes(('/example/'))
-//   })
-// })
-
-const toExample = (path:string)=>{
+const toExample = (path: string) => {
   router.push(path)
 }
-
 </script>
 
 <template>
   <header>
-    <var-app-bar
-      class="app-bar"
-      title-position="left"
-    >
+    <var-app-bar class="app-bar" title-position="left">
       <template #left>
-        <var-button
-          style="margin-left: 2px;"
-          text
-          round
-          color="transparent"
-          text-color="#fff"
-          @click="toGithub"
-        >
-          <var-icon name="github" :size="28" style="margin-top: 1px;" />
+        <var-button style="margin-left: 2px" text round color="transparent" text-color="#fff" @click="toGithub">
+          <var-icon name="github" :size="28" style="margin-top: 1px" />
         </var-button>
       </template>
       <template #right>
-        <var-button
-          text
-          round
-          color="transparent"
-          text-color="#fff"
-          @click="toggleTheme"
-        >
-          <var-icon
-            size="24px"
-            color="#fff"
-            :name="darkMode ? 'weather-night':'white-balance-sunny'"
-          />
+        <var-button text round color="transparent" text-color="#fff" @click="toggleTheme">
+          <var-icon size="24px" color="#fff" :name="darkMode ? 'weather-night' : 'white-balance-sunny'" />
         </var-button>
 
         <var-menu :offset-y="36" v-model:show="showMenu">
-          <var-button
-            style="padding-right: 6px"
-            text
-            text-color="#fff"
-            @click.stop="showMenu = true"
-          >
+          <var-button style="padding-right: 6px" text text-color="#fff" @click.stop="showMenu = true">
             <var-icon name="translate" :size="24" />
             <var-icon name="chevron-down" :size="22" />
           </var-button>
@@ -93,17 +65,19 @@ const toExample = (path:string)=>{
             <div class="cell-list">
               <var-cell
                 :class="[lang === key && 'pro-language-cell--active']"
-                class='pro-language-cell'
-                v-for="(val,key) in languages"
+                class="pro-language-cell"
+                v-for="(val, key) in languages"
                 @click="changeLanguage(key)"
-                :key='key'>{{val}}</var-cell>
+                :key="key"
+                >{{ val }}</var-cell
+              >
             </div>
           </template>
         </var-menu>
       </template>
     </var-app-bar>
   </header>
-  <div class='mainContent'>
+  <div class="mainContent">
     <div class="logo">
       <h1 class="pro-home__title">
         <img class="pro-home__image" :src="logo" />
@@ -111,24 +85,19 @@ const toExample = (path:string)=>{
       </h1>
       <h2 class="pro-home__desc">{{ description[lang] }}</h2>
     </div>
-    <var-cell
-      v-for="example in exampleList"
-      :key="example.name"
-      @click="toExample(example.path)"
-      v-ripple
-    >
+    <var-cell v-for="example in exampleList" :key="example.name" @click="toExample(example.path)" v-ripple>
       <template #extra>
         <var-icon name="chevron-right" size="14" />
       </template>
       <template #default>
-        {{ pack[example.name]}}
+        {{ pack[example.name] }}
       </template>
     </var-cell>
   </div>
 </template>
 
-<style lang='less' scoped>
-header{
+<style lang="less" scoped>
+header {
   font-weight: bold;
 }
 .pro-language-cell {
@@ -140,10 +109,9 @@ header{
     color: #3a7afe;
     background: #edf5ff;
   }
-
 }
-.mainContent{
-  padding: 0 12px  54px 12px;
+.mainContent {
+  padding: 0 12px 54px 12px;
 
   .logo {
     height: 100px;
@@ -185,5 +153,4 @@ header{
     margin-left: 16px;
   }
 }
-
 </style>
