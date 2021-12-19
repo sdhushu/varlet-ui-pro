@@ -25,9 +25,6 @@ for (let key in files) {
     path:`/example/${fileName}`,
     name: fileName,
     component: ()=>import(`../views/example/${fileName}/index.vue`),
-    meta:{
-      theme:'purple'
-    }
   })
 }
 
