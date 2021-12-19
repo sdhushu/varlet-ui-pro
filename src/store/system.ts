@@ -30,7 +30,9 @@ export const useSystemStore = defineStore('system', {
     changeTheme(theme:string){
       this.theme = theme
       localStorage.setItem('theme', theme)
-      StyleProvider(theme==='dark'?Object.assign(this.getThemeConfig(theme),this.getThemeConfig(this.pageTheme)):this.getThemeConfig(theme))
+      StyleProvider(theme==='dark'?
+        Object.assign(this.getThemeConfig(theme),this.getThemeConfig(this.pageTheme))
+        :this.getThemeConfig(theme))
     },
     changePageTheme(theme:string) {
       this.pageTheme = theme

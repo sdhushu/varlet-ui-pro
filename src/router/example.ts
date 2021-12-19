@@ -14,7 +14,7 @@ for (let key in files) {
   example.push({
     path:`/example/${fileName}`,
     name: fileName,
-    component: import(/* @vite-ignore */key),
+    component: ()=>import(`../views/example/${fileName}/index.vue`),
     meta:{
       theme:'purple'
     }
