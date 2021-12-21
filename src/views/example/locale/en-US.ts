@@ -1,4 +1,5 @@
 
 export default {
-  proNotificationCard: "Notification Card"
+  proNotificationCard: "Notification Card",
+  searchBar: "Search Bar"
 }

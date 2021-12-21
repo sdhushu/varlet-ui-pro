@@ -22,6 +22,7 @@ const back = () => {
       </template>
     </var-app-bar>
   </header>
+  <router-view />
 </template>
 
 <style lang="less" scoped>
