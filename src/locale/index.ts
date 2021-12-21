@@ -1,5 +1,6 @@
-import zhCN from './zh-CN'
 import enUS from './en-US'
+
+import zhCN from './zh-CN'
 
 import { Locale } from '@varlet/ui'
 
@@ -14,9 +15,9 @@ const use = (lang: string) => {
 
 add('en-US',_enUS)
 
-merge('en-US', enUS as any)
+merge('en-US', enUS)
 
-merge('zh-CN', zhCN as any)
+merge('zh-CN', zhCN)
 
 export { add, pack, packs, merge, use }
 

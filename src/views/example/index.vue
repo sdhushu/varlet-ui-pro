@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import config from '@/static/config.json'
 import { useSystemStore } from '@/store/system'
-import { pack, use } from './locale'
 import { computed } from 'vue'
+import {pack,use} from '@/locale'
+
 import router from '@/router'
 import example from '@/router/example'
 const { header, title, description } = config as Record<string, any>
@@ -91,7 +92,7 @@ const toExample = (path: string) => {
         <var-icon name="chevron-right" size="14" />
       </template>
       <template #default>
-        {{ pack[example.name] }}
+        {{ pack.example[example.name] }}
       </template>
     </var-cell>
   </div>

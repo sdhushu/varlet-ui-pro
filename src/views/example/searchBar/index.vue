@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import { pack, use } from './locale'
+import { pack } from '@/locale'
 console.log(pack)
 </script>
 
