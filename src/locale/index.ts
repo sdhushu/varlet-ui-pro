@@ -7,11 +7,8 @@ import { Locale } from '@varlet/ui'
 // @ts-ignore
 import _enUS from '@varlet/ui/es/locale/en-US'
 
-const { add, use: exampleUse, pack, packs, merge } = Locale
+const { add, use, pack, packs, merge } = Locale
 
-const use = (lang: string) => {
-  exampleUse(lang)
-}
 
 add('en-US',_enUS)
 

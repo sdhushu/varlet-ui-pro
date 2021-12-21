@@ -4,7 +4,7 @@ let zh_CN:Record<string, any> = {}
 
 for (let file in files){
   const fileName = file.replace(/(\.\/|\.ts)/g, '') as string
-  zh_CN[fileName] = files[file]
+  zh_CN[fileName] = files[file].default
 }
 
 export default zh_CN

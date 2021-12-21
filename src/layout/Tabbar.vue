@@ -5,7 +5,6 @@ import { pack } from '@/locale'
 
 const menuList = tabBar.children
 const router = useRouter()
-
 let active = $ref(router.currentRoute.value.name)
 
 const routeTo = (path: string) => {
@@ -25,7 +24,7 @@ const routeTo = (path: string) => {
   >
     <var-tab v-for="v in menuList" :name="v.name" :key="v.name" @click="routeTo(v.path)">
       <var-icon class="icon" :name="v.meta.icon" />
-      <div>{{pack.example?[v.meta.title] }}</div>
+      <div>{{pack.layout[v.meta.title]}}</div>
     </var-tab>
   </var-tabs>
 </template>

@@ -4,7 +4,7 @@ console.log(pack)
 </script>
 
 <template>
-  {{pack["test"]}}
+  {{pack.layout["test"]}}
 </template>
 
 <style scoped lang='less'></style>
