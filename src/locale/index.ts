@@ -3,7 +3,6 @@ import enUS from './en-US'
 import zhCN from './zh-CN'
 
 import { Locale } from '@varlet/ui'
-
 // @ts-ignore
 import _enUS from '@varlet/ui/es/locale/en-US'
 

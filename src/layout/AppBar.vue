@@ -22,11 +22,17 @@ const back = () => {
       </template>
     </var-app-bar>
   </header>
-  <router-view />
+  <div class='pro-router-view'>
+    <router-view />
+  </div>
 </template>
 
 <style lang="less" scoped>
 header {
   font-weight: bold;
+}
+
+.pro-router-view{
+  padding: 12px;
 }
 </style>
