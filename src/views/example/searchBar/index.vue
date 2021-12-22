@@ -3,15 +3,12 @@ import { pack } from '@/locale'
 import { Snackbar } from '@varlet/ui'
 let value = $ref('')
 
-const doSearch = () => {
-
+const clickSearch = () => {
   Snackbar('Hello World！！')
 }
-
 </script>
 
 <template>
-
   <div>
     <h4>{{ pack.searchBar?.basicUsage }}</h4>
     <search-bar :placeholder="pack.searchBar?.placeholder" v-model="value" />
@@ -34,7 +31,9 @@ const doSearch = () => {
         <var-icon name="camera-outline" class="pro-searchBar__camera" />
       </template>
       <template #append>
-        <var-button text type="primary" @click='doSearch'>{{ pack.searchBar?.search }}</var-button>
+        <var-button style="flex-shrink: 0" text type="primary" @click="clickSearch">{{
+          pack.searchBar?.search
+        }}</var-button>
       </template>
     </search-bar>
   </div>
@@ -48,7 +47,7 @@ h4 {
 div {
   margin-bottom: 30px;
 }
-.pro-searchBar__camera{
+.pro-searchBar__camera {
   margin-right: 6px;
 }
 </style>

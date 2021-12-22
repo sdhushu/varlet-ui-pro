@@ -33,7 +33,7 @@ const handleChange = (v: string, e: Event) => {
         <var-icon class="pro-search-bar__icon" name="magnify" />
       </template>
     </var-input>
-    <slot name="append"></slot>
+    <slot name="append" class='append'></slot>
   </div>
 </template>
 
@@ -58,5 +58,6 @@ const handleChange = (v: string, e: Event) => {
   &__round {
     border-radius: 16px;
   }
+
 }
 </style>
