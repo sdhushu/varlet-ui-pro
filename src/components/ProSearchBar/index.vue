@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { props } from './props'
-import { defineProps } from 'vue'
 const proProps = defineProps(props)
 
 let value = $ref(proProps.value)

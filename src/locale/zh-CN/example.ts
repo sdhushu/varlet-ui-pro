@@ -1,4 +1,5 @@
 export default {
-  proNotificationCard: "消息通知",
-  searchBar: "搜索栏"
+  proNotificationCard: "NotificationCard 消息通知",
+  proSearchBar: "SearchBar 搜索栏",
+  proTabBar: "TabBar 标签栏"
 }
