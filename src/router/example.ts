@@ -19,9 +19,8 @@ let example: RouteRecordRaw = {
 }
 
 for (let key in files) {
-  let fileName = key.replace(/(\..\/views\/example\/|\/index.vue)/g, '')
-  // @ts-ignore
-  example.children.push({
+  let fileName = key.replace(/(\..\/views\/example\/|\/index.vue)/g, '') as string
+  (example.children as Array<RouteRecordRaw>).push({
     path:`/example/${fileName}`,
     name: fileName,
     component: ()=>import(`../views/example/${fileName}/index.vue`),

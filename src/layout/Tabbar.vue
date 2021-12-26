@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import tabBar from '@/router/tabBar'
 import { useRouter } from 'vue-router'
+import { pack } from '@/locale'
 
 const menuList = tabBar.children
 const router = useRouter()
-
 let active = $ref(router.currentRoute.value.name)
 
-const routeTo = (path:string) => {
+const routeTo = (path: string) => {
   router.push(path)
 }
 </script>
@@ -22,9 +22,9 @@ const routeTo = (path:string) => {
     fixed-bottom
     indicator-color="#00000000"
   >
-    <var-tab v-for="v in menuList" :name='v.name' :key="v.name" @click="routeTo(v.path)">
+    <var-tab v-for="v in menuList" :name="v.name" :key="v.name" @click="routeTo(v.path)">
       <var-icon class="icon" :name="v.meta.icon" />
-      <div>{{ v.meta.title }}</div>
+      <div>{{pack.layout[v.meta.title]}}</div>
     </var-tab>
   </var-tabs>
 </template>

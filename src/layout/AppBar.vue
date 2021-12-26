@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { pack } from '@/views/example/locale'
+import { pack } from '@/locale'
 import { useRouter } from 'vue-router'
 import { computed } from 'vue'
 
@@ -14,7 +14,7 @@ const back = () => {
 
 <template>
   <header>
-    <var-app-bar class="app-bar" title-position="left" :title="pack[routerName]">
+    <var-app-bar class="app-bar" title-position="left" :title="pack.example[routerName]">
       <template #left>
         <var-button text round @click="back" color="transparent" text-color="#fff">
           <var-icon name="chevron-left" :size="28" style="margin-top: 1px" />
@@ -22,10 +22,17 @@ const back = () => {
       </template>
     </var-app-bar>
   </header>
+  <div class='pro-router-view'>
+    <router-view />
+  </div>
 </template>
 
 <style lang="less" scoped>
 header {
   font-weight: bold;
+}
+
+.pro-router-view{
+  padding: 12px;
 }
 </style>

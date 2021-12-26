@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import config from '@/static/config.json'
 import { useSystemStore } from '@/store/system'
-import { pack, use } from './locale'
 import { computed } from 'vue'
+import {pack,use} from '@/locale'
+
 import router from '@/router'
 import example from '@/router/example'
 const { header, title, description } = config as Record<string, any>
+
 
 const exampleList = computed(() => {
   return example.children
@@ -17,7 +19,7 @@ const { github, logo, i18n } = header
 
 let showMenu = $ref(false)
 
-const lang = computed(() => system.lang)
+const lang = computed(() => system.getLang)
 
 const languages = i18n
 
@@ -77,7 +79,7 @@ const toExample = (path: string) => {
       </template>
     </var-app-bar>
   </header>
-  <div class="mainContent">
+  <div class="pro-menu">
     <div class="logo">
       <h1 class="pro-home__title">
         <img class="pro-home__image" :src="logo" />
@@ -90,7 +92,7 @@ const toExample = (path: string) => {
         <var-icon name="chevron-right" size="14" />
       </template>
       <template #default>
-        {{ pack[example.name] }}
+        {{ pack.example[example.name] }}
       </template>
     </var-cell>
   </div>
@@ -110,7 +112,7 @@ header {
     background: #edf5ff;
   }
 }
-.mainContent {
+.pro-menu {
   padding: 0 12px 54px 12px;
 
   .logo {
