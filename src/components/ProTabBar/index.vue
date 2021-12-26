@@ -22,7 +22,7 @@ const onTabClick = (tab: Record<string, string>, index: number) => {
 
 <template>
   <var-tabs v-model:active='active' :fixed-bottom='fixedBottom' elevation indicator-size='0'>
-    <var-tab v-for='(tab,index) in tabList' @click='onTabClick(tab,index)'>
+    <var-tab v-for='(tab,index) in tabList' @click='onTabClick(tab,index)' :key="index">
       <var-badge type='danger' position='right-top'>
         <var-icon v-if='tab.icon' :name='tab.icon' />
         <div>{{ tab.text }}</div>

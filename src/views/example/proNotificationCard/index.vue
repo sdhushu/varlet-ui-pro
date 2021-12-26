@@ -1,33 +1,13 @@
 <script setup lang='ts'>
-import { props2 } from './props'
 import { ref } from 'vue'
-const props = defineProps(props2)
 </script>
 
 <template>
-  <div class="pro-cell">
-    <var-cell>
-      <template #icon>
-        <var-swipe class="swipe" :loop="props.loop" vertical :autoplay="props.autoplay" :touchable="false">
-          <var-swipe-item  v-for="item in props.contents" :key="item">
-            <var-icon name="information" />
-          </var-swipe-item>
-        </var-swipe>
-      </template>
-      <template #default>
-        <div class="pro-cell-default">
-          <var-swipe class="swipe" :loop="props.loop" vertical :autoplay="props.autoplay" :touchable="false">
-            <var-swipe-item  v-for="item in props.contents" :key="item">
-              {{ item }}
-            </var-swipe-item>
-          </var-swipe>
-        </div>
-      </template>
-      <template #extra>
-        <slot name="extra" />
-      </template>
-    </var-cell>
-  </div>
+  <proNotificationCard :contents="['我是火猫', '你是小周']" :loop="false" :autoplay="0">
+    <template #extra>
+      <var-icon name="information" />
+    </template>
+  </proNotificationCard>
 </template>
 
 <style lang="less" scoped>

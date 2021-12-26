@@ -3,9 +3,11 @@ export const props2 = {
     type: Array
   },
   loop: {
-    type: Boolean
+    type: Boolean,
+    default: false
   },
   autoplay: {
-    type: Number
+    type: Number,
+    default: 0
   }
 }
