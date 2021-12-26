@@ -1,36 +1,37 @@
 <script setup lang='ts'>
-import { props2 } from './props'
-import { ref } from 'vue'
-const props = defineProps(props2)
+import { proProps } from "./props"
+import { ref } from "vue"
+
+const props = defineProps(proProps)
 </script>
 
 <template>
-  <div class="pro-cell">
+  <div class='pro-cell'>
     <var-cell>
       <template #icon>
-        <var-swipe class="swipe" :loop="props.loop" vertical :autoplay="props.autoplay" :touchable="false">
-          <var-swipe-item  v-for="item in props.contents" :key="item">
-            <var-icon name="information" />
+        <var-swipe class='swipe' :loop='props.loop' vertical :autoplay='props.autoplay' :touchable='false'>
+          <var-swipe-item v-for='item in props.contents' :key='item'>
+            <var-icon name='information' />
           </var-swipe-item>
         </var-swipe>
       </template>
       <template #default>
-        <div class="pro-cell-default">
-          <var-swipe class="swipe" :loop="props.loop" vertical :autoplay="props.autoplay" :touchable="false">
-            <var-swipe-item  v-for="item in props.contents" :key="item">
+        <div class='pro-cell-default'>
+          <var-swipe class='swipe' :loop='props.loop' vertical :autoplay='props.autoplay' :touchable='false'>
+            <var-swipe-item v-for='item in props.contents' :key='item'>
               {{ item }}
             </var-swipe-item>
           </var-swipe>
         </div>
       </template>
       <template #extra>
-        <slot name="extra" />
+        <slot name='extra' />
       </template>
     </var-cell>
   </div>
 </template>
 
-<style lang="less" scoped>
+<style lang='less' scoped>
 .swipe {
   height: 40px;
 }

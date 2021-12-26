@@ -1,4 +1,4 @@
-export const props2 = {
+export const proProps = {
   contents: {
     type: Array
   },

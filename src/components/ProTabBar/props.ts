@@ -1,6 +1,6 @@
 import type { PropType } from "vue"
 
-export const props = {
+export const proProps = {
   tabList: {
     type: Array
   },

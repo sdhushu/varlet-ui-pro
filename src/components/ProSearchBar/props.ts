@@ -1,27 +1,27 @@
-import type { PropType } from 'vue'
+import type { PropType } from "vue"
 
-export const props = {
+export const proProps = {
   placeholder: {
-    type: String,
+    type: String
   },
   round: {
     type: Boolean,
-    default: false,
+    default: false
   },
   value: {
-    type: String,
+    type: String
   },
   disabled: {
     type: Boolean,
-    default: false,
+    default: false
   },
-  'onUpdate:value': {
-    type: Function as PropType<(value: string) => void>,
+  "onUpdate:value": {
+    type: Function as PropType<(value: string) => void>
   },
   onInput: {
-    type: Function as PropType<(value: string, e: Event) => void>,
+    type: Function as PropType<(value: string, e: Event) => void>
   },
   onChange: {
-    type: Function as PropType<(value: string, e: Event) => void>,
-  },
+    type: Function as PropType<(value: string, e: Event) => void>
+  }
 }
