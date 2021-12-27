@@ -1,13 +1,24 @@
 export const proProps = {
   contents: {
-    type: Array
+    type: [Array, String]
+  },
+  noticeIcon: {
+    type: String
   },
   loop: {
     type: Boolean,
-    default: false
+    default: true
+  },
+  arrow: {
+    type: Boolean,
+    default: true
   },
   autoplay: {
     type: Number,
-    default: 0
+    default: 1000
+  },
+  touchable: {
+    type: Boolean,
+    default: false
   }
 }

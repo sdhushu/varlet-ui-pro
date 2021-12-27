@@ -1,16 +1,49 @@
 <script setup lang='ts'>
-import { ref } from 'vue'
+const content1 = "我是火猫"
+const icon1 = "bell-outline"
+const content2 = [
+  {
+    noticeIcon: "bell-outline",
+    text: "我是火猫"
+  },
+  {
+    noticeIcon: "heart",
+    text: "你是小周"
+  }
+]
 </script>
 
 <template>
-  <proNotificationCard :contents="['我是火猫', '你是小周']" :loop="false" :autoplay="0">
-    <template #extra>
-      <var-icon name="information" />
-    </template>
-  </proNotificationCard>
+
+  <div>
+    <h4>基本</h4>
+    <proNotificationCard :contents='content1' />
+  </div>
+
+  <div>
+    <h4>基本</h4>
+    <proNotificationCard :contents='content1' :noticeIcon='icon1' :arrow='false' />
+  </div>
+
+  <div>
+    <h4>基本</h4>
+    <proNotificationCard :contents='content2' />
+  </div>
+
+  <div>
+    <h4>基本</h4>
+    <proNotificationCard :contents='content2' :autoplay='2000'>
+      <template #extra>
+        <span style='width: 30px'>查看</span>
+      </template>
+    </proNotificationCard>
+  </div>
+
 </template>
 
-<style lang="less" scoped>
+<style lang='less' scoped>
+@import '../../../static/css/example';
+
 .swipe {
   height: 40px;
 }

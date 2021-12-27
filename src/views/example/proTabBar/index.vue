@@ -78,14 +78,7 @@ const clickTabbar = (e) => {
 </template>
 
 <style scoped lang='less'>
-h4 {
-  margin-bottom: 14px;
-  display: block;
-}
-
-div {
-  margin-bottom: 30px;
-}
+@import '../../../static/css/example';
 
 .pro-searchBar__camera {
   margin-right: 6px;

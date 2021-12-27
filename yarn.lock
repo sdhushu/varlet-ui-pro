@@ -85,10 +85,10 @@
   resolved "https://registry.yarnpkg.com/@types/throttle-debounce/-/throttle-debounce-2.1.0.tgz#1c3df624bfc4b62f992d3012b84c56d41eab3776"
   integrity sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==
 
-"@varlet/ui@^1.23.11":
-  version "1.23.11"
-  resolved "https://registry.yarnpkg.com/@varlet/ui/-/ui-1.23.11.tgz#9b294abaec07245b84147ee59e112db05420ef18"
-  integrity sha512-ovHUWB/mKUDKClTQ0WG4Dz2eMJP/Cxity7kdHsVzB8xOPaJj+JdiHX0zF9h8CwNNd0KRc7QEKx0ZuegLG02lVQ==
+"@varlet/ui@^1.24.1":
+  version "1.24.1"
+  resolved "https://registry.yarnpkg.com/@varlet/ui/-/ui-1.24.1.tgz#c7654ceb2019c94e376955f4f0182a6757a341e4"
+  integrity sha512-eAg0gWxm2XWej3IdZ7vo9VO7ei2cPCYVQhJ4u49x9KsA/APxRJSG4qcpi0ttv958W85EvQR1aRRipHTR0cZFAw==
   dependencies:
     dayjs "^1.10.4"
     decimal.js "^10.2.1"
