@@ -3,7 +3,6 @@ import { proProps } from "./props"
 import { computed, ComputedRef } from "vue"
 
 const props = defineProps(proProps)
-const fixedBottom: ComputedRef<boolean> = computed(() => props.fixedBottom)
 
 let active = $ref(props.active)
 
@@ -19,7 +18,7 @@ const onTabClick = (tab: Record<string, string>, index: number) => {
 </script>
 
 <template>
-  <var-tabs v-model:active='active' :fixed-bottom='fixedBottom' elevation indicator-size='0'>
+  <var-tabs v-model:active='active' :fixedBottom='props.fixedBottom' elevation indicator-size='0' class='pro-tabbar'>
     <var-tab v-for='(tab, index) in tabList' @click='onTabClick(tab, index)' :key='index'>
       <var-badge
         type='danger'
@@ -29,7 +28,13 @@ const onTabClick = (tab: Record<string, string>, index: number) => {
         :dot='tab.dot'
         :value='tab.num'
       >
-        <var-space direction='column' align='center' size='[0,0]'>
+        <var-space
+          direction='column'
+          align='center'
+          size='[0,0]'
+          :class="[tab.big && tab.icon ? 'pro-tabbar-bigIcon' : null]"
+          class='pro-tabbar-common'
+        >
           <var-icon v-if='tab.icon' :name='tab.icon' />
           <div>{{ tab.text }}</div>
         </var-space>
@@ -43,31 +48,40 @@ const onTabClick = (tab: Record<string, string>, index: number) => {
   padding: 0;
 }
 
-:deep(.pro-tabbar-dot) {
-  right: 0;
-  transform: translateY(-30%) translateX(70%);
-}
+.pro-tabbar {
+  overflow: visible;
+  height: 100%;
 
-:deep(.pro-tabbar-content) {
-  padding: 0 4px;
-  transform: translateY(-15%) translateX(55%);
-  z-index: 99;
-
-  span {
-    font-size: 2px;
+  :deep(*) {
+    overflow: visible !important;
   }
-}
 
-//:deep(.var-badge__content) {
-//
-//}
+  :deep(&-dot) {
+    right: 0;
+    transform: translateY(5%) translateX(70%);
+  }
 
-//.deep(.var-badge__content) {
-//  padding: 0;
-//
-//}
+  :deep(&-content) {
+    padding: 0 4px;
+    transform: translateY(-5%) translateX(70%);
+    z-index: 99;
+  }
 
-.var-badge--right-top {
-  //transform: translateY(-20%) translateX(-10%);
+  &-common {
+    margin: 6px 0;
+  }
+
+  &-bigIcon {
+    position: absolute;
+    top: -68px;
+    left: -34px;
+
+    .var-icon {
+      font-size: 68px;
+      z-index: 999;
+      margin-bottom: -4px;
+      color: var(--color-primary);
+    }
+  }
 }
 </style>

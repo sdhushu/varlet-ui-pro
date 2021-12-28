@@ -54,9 +54,33 @@ let tabList3 = $ref([
     num: "99"
   }
 ])
-const clickTabbar = (e) => {
+const clickTabbar = (e: number) => {
   Snackbar.info(`You clicked tab${e + 1}`)
 }
+let active4 = $ref(0)
+let tabList4 = $ref([
+  {
+    icon: "home-outline",
+    text: "tab1"
+  },
+  {
+    icon: "cart",
+    text: "tab2"
+  },
+  {
+    icon: "plus-circle",
+    big: true,
+    text: "tab"
+  },
+  {
+    icon: "star",
+    text: "tab3"
+  },
+  {
+    icon: "account-circle-outline",
+    text: "tab4"
+  }
+])
 </script>
 
 <template>
@@ -73,6 +97,11 @@ const clickTabbar = (e) => {
   <div>
     <h4>{{ pack.tabbar?.showBadge }}</h4>
     <pro-tab-bar v-model:active='active3' :tabList='tabList3' @click='clickTabbar'></pro-tab-bar>
+  </div>
+
+  <div>
+    <h4>{{ pack.tabbar?.bigIcon }}</h4>
+    <pro-tab-bar v-model:active='active4' :tabList='tabList4' @click='clickTabbar'></pro-tab-bar>
   </div>
 
 </template>
