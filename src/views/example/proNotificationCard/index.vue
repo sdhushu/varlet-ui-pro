@@ -1,4 +1,6 @@
 <script setup lang='ts'>
+import { pack } from "@/locale"
+
 const content1 = "我是火猫"
 const icon1 = "bell-outline"
 const content2 = [
@@ -16,27 +18,27 @@ const content2 = [
 <template>
 
   <div>
-    <h4>基本</h4>
+    <h4>{{ pack.notice.basis }}</h4>
     <proNotificationCard :contents='content1' />
   </div>
 
   <div>
-    <h4>基本</h4>
-    <proNotificationCard :contents='content1' :noticeIcon='icon1' :arrow='false' />
-  </div>
-
-  <div>
-    <h4>基本</h4>
-    <proNotificationCard :contents='content2' />
-  </div>
-
-  <div>
-    <h4>基本</h4>
-    <proNotificationCard :contents='content2' :autoplay='2000'>
+    <h4>{{ pack.notice.slot }}</h4>
+    <proNotificationCard :contents='content1' :noticeIcon='icon1' :arrow='false'>
       <template #extra>
         <span style='width: 30px'>查看</span>
       </template>
     </proNotificationCard>
+  </div>
+
+  <div>
+    <h4>{{ pack.notice.swipe }}</h4>
+    <proNotificationCard :contents='content2' />
+  </div>
+
+  <div>
+    <h4>{{ pack.notice.interval }}</h4>
+    <proNotificationCard :contents='content2' :autoplay='2000'/>
   </div>
 
 </template>
