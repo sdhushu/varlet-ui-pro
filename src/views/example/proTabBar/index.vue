@@ -85,22 +85,22 @@ let tabList4 = $ref([
 
 <template>
   <div>
-    <h4>{{ pack.tabbar?.basicUsage }}</h4>
+    <h4>{{ pack.tabbar.basicUsage }}</h4>
     <pro-tab-bar v-model:active='active1' :tabList='tabList1'></pro-tab-bar>
   </div>
 
   <div>
-    <h4>{{ pack.tabbar?.customIcon }}</h4>
+    <h4>{{ pack.tabbar.customIcon }}</h4>
     <pro-tab-bar v-model:active='active2' :tabList='tabList2'></pro-tab-bar>
   </div>
 
   <div>
-    <h4>{{ pack.tabbar?.showBadge }}</h4>
+    <h4>{{ pack.tabbar.showBadge }}</h4>
     <pro-tab-bar v-model:active='active3' :tabList='tabList3' @click='clickTabbar'></pro-tab-bar>
   </div>
 
   <div>
-    <h4>{{ pack.tabbar?.bigIcon }}</h4>
+    <h4>{{ pack.tabbar.bigIcon }}</h4>
     <pro-tab-bar v-model:active='active4' :tabList='tabList4' @click='clickTabbar'></pro-tab-bar>
   </div>
 
