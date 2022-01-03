@@ -1,22 +1,25 @@
-import vue from '@vitejs/plugin-vue'
-import components from 'unplugin-vue-components/vite'
-import { VarletUIResolver } from 'unplugin-vue-components/resolvers'
-import { defineConfig } from 'vite'
-const { resolve } = require('path')
+import vue from "@vitejs/plugin-vue"
+import components from "unplugin-vue-components/vite"
+import { VarletUIResolver } from "unplugin-vue-components/resolvers"
+import { defineConfig } from "vite"
+
+const { resolve } = require("path")
+
 
 export default defineConfig({
-  base:'./',
+  base: "./",
   plugins: [
     vue({
-      refTransform: true,
+      // @ts-ignore
+      reactivityTransform: true
     }),
     components({
-      resolvers: [VarletUIResolver()],
-    }),
+      resolvers: [VarletUIResolver()]
+    })
   ],
   resolve: {
     alias: {
-      '@': resolve('src'),
-    },
-  },
+      "@": resolve("src")
+    }
+  }
 })
