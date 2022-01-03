@@ -9,15 +9,14 @@ const stringContents: ComputedRef<boolean> = computed(() => typeof props.content
 </script>
 
 <template>
-  <var-cell class='var-elevation--1 pro-notice-card'>
+  <var-cell class='pro-notice-card'>
     <template #icon v-if='props.noticeIcon'>
       <var-icon :name='props.noticeIcon' />
     </template>
     <template #default>
       <div class='pro-notice-card__content'>
         <div v-if='stringContents' class='var--ellipsis'>{{ props.contents }}</div>
-        <var-swipe class='pro-notice-card__swipe' v-else :loop='props.loop' vertical :autoplay='props.autoplay'
-                   :touchable='props.touchable'>
+        <var-swipe class='pro-notice-card__swipe' v-else :loop='props.loop' vertical :autoplay='props.autoplay' :touchable='props.touchable'>
           <var-swipe-item v-for='content in props.contents' :key='content.text'>
             <var-icon v-if='content.noticeIcon' :name='content.noticeIcon' />
             <div class='var--ellipsis'>{{ content.text }}</div>
