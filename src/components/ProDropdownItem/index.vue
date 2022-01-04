@@ -9,13 +9,12 @@ let clickSelf = $ref(false)
 
 let active = $ref(props.active)
 
-console.log(props.active, active, "props.active")
-
-const selectItem = (value: number) => {
+const selectItem = (value: number | string | boolean) => {
   active = value
   offsetY = false
   clickSelf = false
   props["onUpdate:active"]?.(active)
+  props.onChange?.(value)
 }
 
 const showMenu = () => {
@@ -24,7 +23,6 @@ const showMenu = () => {
 }
 
 onMounted(() => {
-
   document.addEventListener("click", handleMenuClose)
 })
 const handleMenuClose = () => {
