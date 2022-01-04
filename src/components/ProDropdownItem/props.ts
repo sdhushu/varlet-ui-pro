@@ -7,6 +7,9 @@ export const proProps = {
   active: {
     type: [String, Number, Boolean]
   },
+  onChange: {
+    type: Function as PropType<(active: string | number | boolean) => void>
+  },
   "onUpdate:active": {
     type: Function as PropType<(active: string | number | boolean) => void>
   }
