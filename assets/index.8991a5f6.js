@@ -1,0 +1,1 @@
+import{b as o,e as n,o as s,f as r,h as c,w as l,F as d,g as u,v as _,d as p,S as i,K as m}from"./vendor.9c7d8189.js";const v=u("div",null,"home",-1),f=_("test dark"),C=o({setup(h){let e=n(null);const t=()=>{e.value=e.value?null:p,i(e.value)};return(k,x)=>{const a=m;return s(),r(d,null,[v,c(a,{type:"primary",onClick:t},{default:l(()=>[f]),_:1})],64)}}});export{C as default};
