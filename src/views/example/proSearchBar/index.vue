@@ -11,29 +11,29 @@ const clickSearch = () => {
 
 <template>
   <div>
-    <h4>{{ pack.searchBar?.basicUsage }}</h4>
-    <pro-search-bar :placeholder='pack.searchBar?.placeholder' v-model='value' />
+    <h4>{{ pack.searchBar.basicUsage }}</h4>
+    <pro-search-bar :placeholder='pack.searchBar.placeholder' v-model='value' />
   </div>
 
   <div>
-    <h4>{{ pack.searchBar?.round }}</h4>
-    <pro-search-bar :placeholder='pack.searchBar?.placeholder' v-model='value' round />
+    <h4>{{ pack.searchBar.round }}</h4>
+    <pro-search-bar :placeholder='pack.searchBar.placeholder' v-model='value' round />
   </div>
 
   <div>
-    <h4>{{ pack.searchBar?.disabled }}</h4>
-    <pro-search-bar :placeholder='pack.searchBar?.placeholder' v-model='value' disabled />
+    <h4>{{ pack.searchBar.disabled }}</h4>
+    <pro-search-bar :placeholder='pack.searchBar.placeholder' v-model='value' disabled />
   </div>
 
   <div>
-    <h4>{{ pack.searchBar?.slot }}</h4>
-    <pro-search-bar :placeholder='pack.searchBar?.placeholder' v-model='value'>
+    <h4>{{ pack.searchBar.slot }}</h4>
+    <pro-search-bar :placeholder='pack.searchBar.placeholder' v-model='value'>
       <template #prepend>
         <var-icon name='camera-outline' class='pro-searchBar__camera' />
       </template>
       <template #append>
         <var-button style='flex-shrink: 0' text type='primary' @click='clickSearch'>{{
-            pack.searchBar?.search
+            pack.searchBar.search
           }}
         </var-button>
       </template>
