@@ -1,5 +1,5 @@
 export default {
-  example: "notificationCard 消息通知卡片",
+  example: "NotificationCard 消息通知卡片",
   basis: "基本用法",
   slot: "插槽",
   swipe: "轮播",

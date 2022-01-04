@@ -1,7 +1,7 @@
 export default {
-  example: "notificationCard",
-  basis: "basis",
-  slot: "slot",
-  swipe: "swipe",
-  interval: "custom interval"
+  example: "NotificationCard",
+  basis: "Basic Use",
+  slot: "Slot",
+  swipe: "Swipe",
+  interval: "Custom Interval"
 }
