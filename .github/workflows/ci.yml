@@ -64,9 +64,7 @@ jobs:
           node-version: 14
 
       - name: Prepare
-        run: |
-          yarn install --frozen-lockfile
-          yarn build
+        run: yarn install --frozen-lockfile
 
       - name: Lint
         run: yarn lint
