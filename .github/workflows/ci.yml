@@ -13,11 +13,6 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         node_version: [12, 14, 16]
-        include:
-          - os: macos-latest
-            node_version: 14
-          - os: windows-latest
-            node_version: 14
       fail-fast: false
 
     name: 'Build: node-${{ matrix.node_version }}, ${{ matrix.os }}'
