@@ -2,7 +2,6 @@
   "name": "varlet-ui-pro",
   "version": "0.0.0",
   "scripts": {
-    "preinstall": "npx simple-git-hooks",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
