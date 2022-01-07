@@ -1,5 +1,5 @@
-import colors from 'picocolors'
-import { readFileSync } from 'fs'
+const colors = require('picocolors')
+const { readFileSync } = require('fs')
 
 // get $1 from commit-msg script
 const msgPath = process.argv[2]
