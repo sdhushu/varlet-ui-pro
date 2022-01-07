@@ -2,22 +2,27 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: 'Build: node-14, ubuntu-latest'
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          fetch-depth: 0
 
-      - name: Install dependencies
-        run: yarn
+      - name: Set node version to 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
 
-      - name: Build site
-        run: yarn build
+      - name: Prepare
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
 
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@4.1.1
@@ -32,3 +37,24 @@ jobs:
         with:
           source-repo: git@github.com:qytayh/varlet-ui-pro.git
           destination-repo: git@gitee.com:qytayh/varlet-ui-pro.git
+
+  lint:
+    runs-on: ubuntu-latest
+    name: 'Lint: node-14, ubuntu-latest'
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set node version to 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Prepare
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: Lint
+        run: yarn lint
