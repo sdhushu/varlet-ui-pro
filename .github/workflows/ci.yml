@@ -42,14 +42,6 @@ jobs:
           branch: gh-page
           folder: dist
 
-      - name: Sync to Gitee
-        uses: wearerequired/git-mirror-action@master
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.GITEE_TOKEN }}
-        with:
-          source-repo: git@github.com:qytayh/varlet-ui-pro.git
-          destination-repo: git@gitee.com:qytayh/varlet-ui-pro.git
-
   lint:
     runs-on: ubuntu-latest
     name: 'Lint: node-14, ubuntu-latest'
