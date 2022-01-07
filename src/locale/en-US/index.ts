@@ -1,9 +1,9 @@
-const files = import.meta.globEager("./*.ts")
+const files = import.meta.globEager('./*.ts')
 
-let en_US: Record<string, any> = {}
+const en_US: Record<string, any> = {}
 
-for (let file in files) {
-  const fileName = file.replace(/(\.\/|\.ts)/g, "") as string
+for (const file in files) {
+  const fileName = file.replace(/(\.\/|\.ts)/g, '') as string
   en_US[fileName] = files[file].default
 }
 

@@ -21,7 +21,7 @@
 ### 介绍
 
 [varlet-ui-pro](http://varletjs.github.io/varlet-ui-pro/)
-是一个基于Vue3和Material风格移动端组件库 [varlet](https://varlet.gitee.io/varlet-ui/) 开发的移动端集成方案，全面拥抱Vue3生态，由社区建立起来的开发团队进行维护。
+是一个基于 Vue3 和 Material 风格移动端组件库 [varlet](https://varlet.gitee.io/varlet-ui/) 开发的移动端集成方案，全面拥抱 Vue3 生态，由社区建立起来的开发团队进行维护。
 
 ### 使用方法
 

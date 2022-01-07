@@ -1,3 +1,3 @@
 export default {
-  example: "示例"
+  example: '示例'
 }

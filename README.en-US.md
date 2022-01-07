@@ -20,8 +20,8 @@
 
 ### Intro
 
-[varlet-ui-pro](http://varletjs.gitee.io/varlet-ui-pro/)  is a mobile integrated development scheme developed based
-on `Vue3` and Material design component library  [varlet](https://varlet.gitee.io/varlet-ui/)
+[varlet-ui-pro](http://varletjs.gitee.io/varlet-ui-pro/) is a mobile integrated development scheme developed based
+on `Vue3` and Material design component library [varlet](https://varlet.gitee.io/varlet-ui/)
 , developed and maintained by partners in the community.
 
 ### How to use
@@ -31,4 +31,3 @@ git clone https://github.com/varletjs/varlet-ui-pro.git
 cd varlet-ui-pro
 yarn && yarn dev
 ```
-

@@ -1,4 +1,4 @@
-import { PropType } from "vue"
+import { PropType } from 'vue'
 
 export const proProps = {
   menu: {
@@ -10,7 +10,7 @@ export const proProps = {
   onChange: {
     type: Function as PropType<(active: string | number | boolean) => void>
   },
-  "onUpdate:active": {
+  'onUpdate:active': {
     type: Function as PropType<(active: string | number | boolean) => void>
   }
 }

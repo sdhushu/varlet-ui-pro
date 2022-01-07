@@ -1,4 +1,3 @@
-
 export default {
-  example: "Example"
+  example: 'Example'
 }

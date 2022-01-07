@@ -1,4 +1,4 @@
-import type { PropType } from "vue"
+import type { PropType } from 'vue'
 
 export const proProps = {
   placeholder: {
@@ -15,7 +15,7 @@ export const proProps = {
     type: Boolean,
     default: false
   },
-  "onUpdate:value": {
+  'onUpdate:value': {
     type: Function as PropType<(value: string) => void>
   },
   onInput: {
