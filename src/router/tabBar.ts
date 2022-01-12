@@ -22,7 +22,7 @@ const tabBar: RouteRecordRaw = {
       component: () => import('../views/home/index.vue'),
       meta: {
         icon: 'home-outline',
-        title: '首页',
+        title: 'template',
         theme: 'seaGreen'
       }
     },
@@ -32,7 +32,7 @@ const tabBar: RouteRecordRaw = {
       component: () => import('../views/user/index.vue'),
       meta: {
         icon: 'account-circle-outline',
-        title: '我的'
+        title: 'profile'
       }
     }
   ]
