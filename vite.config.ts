@@ -20,5 +20,9 @@ export default defineConfig({
     alias: {
       '@': resolve('src')
     }
+  },
+  server: {
+    open: true,
+    port: 4200
   }
 })
