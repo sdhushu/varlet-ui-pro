@@ -10,6 +10,7 @@ const routerName = computed(() => router.currentRoute.value.name)
 const back = () => {
   router.go(-1)
 }
+pack
 </script>
 
 <template>
@@ -17,7 +18,7 @@ const back = () => {
     <var-app-bar
       class="app-bar"
       title-position="left"
-      :title="pack.example[routerName]"
+      :title="pack.example?.routerName"
     >
       <template #left>
         <var-button

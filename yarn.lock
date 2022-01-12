@@ -225,21 +225,21 @@
     "@typescript-eslint/types" "5.9.0"
     eslint-visitor-keys "^3.0.0"
 
-"@varlet/icons@1.24.4":
-  version "1.24.4"
-  resolved "https://registry.yarnpkg.com/@varlet/icons/-/icons-1.24.4.tgz#21ce92181ad91c5bd50131f8c32bf5348eec8ee2"
-  integrity sha512-8UWWWA4D9Y7QkPPhv/NY2HRk/820GV0XlZU7S1tCSxpwro2RSgXYzPutZlD3b0iBWZKU7E6K0yB1XzbiLH/3CQ==
+"@varlet/icons@1.24.10":
+  version "1.24.10"
+  resolved "https://registry.yarnpkg.com/@varlet/icons/-/icons-1.24.10.tgz#2beee7e36edebd19b20bc1ec716fd23f3f1a46b3"
+  integrity sha512-Ug7xXAfHQhUdR1Xnce0+FHf+fj/eX9VL04DC5kOZ59a+I8m34OcLVXnRuJdOXszdIjDJCtTc3yjBetitygRq5A==
   dependencies:
     commander "^6.2.1"
     fs-extra "^9.0.1"
     webfont "^9.0.0"
 
-"@varlet/ui@^1.24.4":
-  version "1.24.4"
-  resolved "https://registry.yarnpkg.com/@varlet/ui/-/ui-1.24.4.tgz#5991d9cf59b91470aadeaeae8cdbbe038246191c"
-  integrity sha512-zNbyhPGjNishvShS+WNgSuiQn7tZHEkivQBWPcKSIclYwjcOwHKUjBVule4/9LO3p4aOMYsckgK26z9QCK1JvA==
+"@varlet/ui@^1.24.10":
+  version "1.24.10"
+  resolved "https://registry.yarnpkg.com/@varlet/ui/-/ui-1.24.10.tgz#2660fce6a73b5c8c88c31ae1d063a940e7a1c3a4"
+  integrity sha512-YHkvbt5mfIXRhuswG+aumt4g8GgMeQjXPreStT6nulnXmJKuArNcz93YS/BD/6cqYu8VU3tQWYJb8Fc4lAvoMQ==
   dependencies:
-    "@varlet/icons" "1.24.4"
+    "@varlet/icons" "1.24.10"
     dayjs "^1.10.4"
     decimal.js "^10.2.1"
 

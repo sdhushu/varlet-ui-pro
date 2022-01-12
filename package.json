@@ -9,7 +9,7 @@
     "lint": "eslint --fix --ext .js,.ts,.vue,.jsx,.tsx ."
   },
   "dependencies": {
-    "@varlet/ui": "^1.24.4",
+    "@varlet/ui": "^1.24.10",
     "pinia": "^2.0.3",
     "vue": "^3.2.16",
     "vue-router": "^4.0.12"

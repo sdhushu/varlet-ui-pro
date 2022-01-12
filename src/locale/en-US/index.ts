@@ -1,10 +1,10 @@
-const files = import.meta.globEager('./*.ts')
+import dropdownMenu from './dropdownMenu'
+import example from './example'
+import layout from './layout'
+import notice from './notice'
+import searchBar from './searchBar'
+import tabbar from './tabbar'
 
-const en_US: Record<string, any> = {}
+const merge = { dropdownMenu, example, layout, notice, searchBar, tabbar }
 
-for (const file in files) {
-  const fileName = file.replace(/(\.\/|\.ts)/g, '') as string
-  en_US[fileName] = files[file].default
-}
-
-export default en_US
+export default merge
