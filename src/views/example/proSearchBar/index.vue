@@ -11,31 +11,34 @@ const clickSearch = () => {
 
 <template>
   <div>
-    <h4>{{ pack.searchBar.basicUsage }}</h4>
-    <pro-search-bar v-model="value" :placeholder="pack.searchBar.placeholder" />
+    <h4>{{ pack.searchBar?.basicUsage }}</h4>
+    <pro-search-bar
+      v-model="value"
+      :placeholder="pack.searchBar?.placeholder"
+    />
   </div>
 
   <div>
-    <h4>{{ pack.searchBar.round }}</h4>
+    <h4>{{ pack.searchBar?.round }}</h4>
     <pro-search-bar
       v-model="value"
-      :placeholder="pack.searchBar.placeholder"
+      :placeholder="pack.searchBar?.placeholder"
       round
     />
   </div>
 
   <div>
-    <h4>{{ pack.searchBar.disabled }}</h4>
+    <h4>{{ pack.searchBar?.disabled }}</h4>
     <pro-search-bar
       v-model="value"
-      :placeholder="pack.searchBar.placeholder"
+      :placeholder="pack.searchBar?.placeholder"
       disabled
     />
   </div>
 
   <div>
-    <h4>{{ pack.searchBar.slot }}</h4>
-    <pro-search-bar v-model="value" :placeholder="pack.searchBar.placeholder">
+    <h4>{{ pack.searchBar?.slot }}</h4>
+    <pro-search-bar v-model="value" :placeholder="pack.searchBar?.placeholder">
       <template #prepend>
         <var-icon name="camera-outline" class="pro-searchBar__camera" />
       </template>
@@ -45,7 +48,7 @@ const clickSearch = () => {
           text
           type="primary"
           @click="clickSearch"
-          >{{ pack.searchBar.search }}
+          >{{ pack.searchBar?.search }}
         </var-button>
       </template>
     </pro-search-bar>

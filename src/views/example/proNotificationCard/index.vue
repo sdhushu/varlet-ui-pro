@@ -17,12 +17,12 @@ const content2 = [
 
 <template>
   <div>
-    <h4>{{ pack.notice.basis }}</h4>
+    <h4>{{ pack.notice?.basis }}</h4>
     <proNotificationCard :contents="content1" />
   </div>
 
   <div>
-    <h4>{{ pack.notice.slot }}</h4>
+    <h4>{{ pack.notice?.slot }}</h4>
     <proNotificationCard
       :contents="content1"
       :notice-icon="icon1"
@@ -35,12 +35,12 @@ const content2 = [
   </div>
 
   <div>
-    <h4>{{ pack.notice.swipe }}</h4>
+    <h4>{{ pack.notice?.swipe }}</h4>
     <proNotificationCard :contents="content2" />
   </div>
 
   <div>
-    <h4>{{ pack.notice.interval }}</h4>
+    <h4>{{ pack.notice?.interval }}</h4>
     <proNotificationCard :contents="content2" :autoplay="2000" />
   </div>
 </template>

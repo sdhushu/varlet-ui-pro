@@ -20,7 +20,7 @@ let showMenu = $ref(false)
 
 const lang = computed(() => system.getLang)
 
-const languages = i18n
+const languages = i18n as Record<string, string>
 
 const darkMode = computed(() => {
   return system.getTheme === 'dark'
@@ -109,8 +109,8 @@ const toExample = (path: string) => {
       <h2 class="pro-home__desc">{{ description[lang] }}</h2>
     </div>
     <var-cell
-      v-for="example in exampleList"
-      :key="example.name"
+      v-for="exampleItem in exampleList"
+      :key="exampleItem.name"
       v-ripple
       @click="toExample(example.path)"
     >
@@ -118,7 +118,7 @@ const toExample = (path: string) => {
         <var-icon name="chevron-right" size="14" />
       </template>
       <template #default>
-        {{ pack.example[example.name] }}
+        {{ pack.example?.[exampleItem.name] }}
       </template>
     </var-cell>
   </div>

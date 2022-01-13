@@ -20,7 +20,7 @@ const active2 = $ref(0)
 
 <template>
   <div>
-    <h4>{{ pack.dropdownMenu.basicUsage }}</h4>
+    <h4>{{ pack.dropdownMenu?.basicUsage }}</h4>
     <pro-dropdown-menu>
       <pro-dropdown-item v-model:active="active1" :menu="menu1" />
       <pro-dropdown-item v-model:active="active2" :menu="menu2" />
