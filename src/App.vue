@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import {useSystemStore} from '@/store/system'
+import { useSystemStore } from '@/store/system'
 const router = useRouter()
 
 console.log(router.getRoutes())
 
 const system = useSystemStore()
-import {use} from  './locale'
+import { use } from './locale'
 use(system.getLang)
 </script>
 

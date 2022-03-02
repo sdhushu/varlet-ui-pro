@@ -1,5 +1,5 @@
 export default {
-  proNotificationCard: "NotificationCard",
-  proSearchBar: "SearchBar",
-  proTabBar: "TabBar"
+  proNotificationCard: 'NotificationCard',
+  proSearchBar: 'SearchBar',
+  proTabBar: 'TabBar'
 }

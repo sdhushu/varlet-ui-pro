@@ -7,14 +7,14 @@ const tabBar: RouteRecordRaw = {
   component: Tabbar,
   children: [
     {
-      path:'/example',
-      name:'example',
-      component:()=>import('../views/example/index.vue'),
+      path: '/example',
+      name: 'example',
+      component: () => import('../views/example/index.vue'),
       meta: {
         icon: 'notebook',
         title: 'example',
-        theme:'purple'
-      },
+        theme: 'purple'
+      }
     },
     {
       path: '/home',
@@ -22,9 +22,9 @@ const tabBar: RouteRecordRaw = {
       component: () => import('../views/home/index.vue'),
       meta: {
         icon: 'home-outline',
-        title: '首页',
+        title: 'template',
         theme: 'seaGreen'
-      },
+      }
     },
     {
       path: '/user',
@@ -32,10 +32,10 @@ const tabBar: RouteRecordRaw = {
       component: () => import('../views/user/index.vue'),
       meta: {
         icon: 'account-circle-outline',
-        title: '我的',
-      },
-    },
-  ],
+        title: 'profile'
+      }
+    }
+  ]
 }
 
 export default tabBar

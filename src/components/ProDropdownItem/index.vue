@@ -1,7 +1,7 @@
-<script lang='ts' setup>
-import { proProps } from "./props"
-import { $ref } from "vue/macros"
-import { computed, ComputedRef, onMounted, onUnmounted } from "vue"
+<script lang="ts" setup>
+import { proProps } from './props'
+import { $ref } from 'vue/macros'
+import { computed, onMounted, onUnmounted } from 'vue'
 
 const props = defineProps(proProps)
 let offsetY = $ref(false)
@@ -13,7 +13,7 @@ const selectItem = (value: number | string | boolean) => {
   active = value
   offsetY = false
   clickSelf = false
-  props["onUpdate:active"]?.(active)
+  props['onUpdate:active']?.(active)
   props.onChange?.(value)
 }
 
@@ -23,7 +23,7 @@ const showMenu = () => {
 }
 
 onMounted(() => {
-  document.addEventListener("click", handleMenuClose)
+  document.addEventListener('click', handleMenuClose)
 })
 const handleMenuClose = () => {
   if (clickSelf) {
@@ -38,35 +38,46 @@ const handleMenuClose = () => {
   clickSelf = false
 }
 onUnmounted(() => {
-  document.removeEventListener("click", handleMenuClose)
+  document.removeEventListener('click', handleMenuClose)
 })
 
 const title = computed(() => {
-  return props.menu.find((item: unknown) => item.value == active)?.label || props.menu[0].label
+  return (
+    props.menu.find((item: unknown) => item.value == active)?.label || // eslint-disable-line
+    props.menu[0].label
+  )
 })
-
-
 </script>
 
 <template>
-  <div class='pro-dropmenu-item'>
-    <div @click='showMenu' :class="offsetY?'pro-dropmenu-item__active':''">{{ title }}
-      <var-icon :name="offsetY?'menu-up':'menu-down'" />
+  <div class="pro-dropmenu-item">
+    <div :class="offsetY ? 'pro-dropmenu-item__active' : ''" @click="showMenu">
+      {{ title }}
+      <var-icon :name="offsetY ? 'menu-up' : 'menu-down'" />
     </div>
-    <div class='cell-list var-elevation--3' v-show='offsetY'>
-      <var-cell :border='index!==props.menu.length-1' :class="item.value===active?'pro-dropmenu-item__active':''"
-                v-for='(item,index) in props.menu' :key='item.value'
-                @click='selectItem(item.value)' :title='item.label'>
+    <div v-show="offsetY" class="cell-list var-elevation--3">
+      <var-cell
+        v-for="(item, index) in props.menu"
+        :key="item.value"
+        :border="index !== props.menu.length - 1"
+        :class="item.value === active ? 'pro-dropmenu-item__active' : ''"
+        :title="item.label"
+        @click="selectItem(item.value)"
+      >
         <template #extra>
-          <var-icon name='check' v-if='item.value===active' color='#2979ff' class='var-icons' />
+          <var-icon
+            v-if="item.value === active"
+            name="check"
+            color="#2979ff"
+            class="var-icons"
+          />
         </template>
       </var-cell>
     </div>
   </div>
-
 </template>
 
-<style scoped lang='less'>
+<style scoped lang="less">
 .pro-dropmenu-item {
   width: 100%;
 
@@ -93,5 +104,4 @@ const title = computed(() => {
     }
   }
 }
-
 </style>

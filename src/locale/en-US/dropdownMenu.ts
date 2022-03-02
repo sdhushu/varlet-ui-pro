@@ -1,4 +1,4 @@
 export default {
-  basicUsage: "Basic Use",
-  disabled: "Disabled"
+  basicUsage: 'Basic Use',
+  disabled: 'Disabled'
 }

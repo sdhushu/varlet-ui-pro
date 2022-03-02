@@ -1,19 +1,29 @@
 <script setup lang="ts">
 import tabBar from '@/router/tabBar'
-import { useRouter } from 'vue-router'
+import { useRouter, RouteMeta } from 'vue-router'
 import { pack } from '@/locale'
 
-const menuList = tabBar.children
+const routeList = tabBar.children || []
 const router = useRouter()
-let active = $ref(router.currentRoute.value.name)
+const active = $ref(router.currentRoute.value.name)
 
 const routeTo = (path: string) => {
   router.push(path)
 }
+
+const getRouteTitle = (meta: RouteMeta | undefined) =>
+  pack.value.layout?.[meta?.title as string]
+
+routeList
+active
+routeTo
+getRouteTitle
 </script>
 
 <template>
-  <div class="view"><router-view /></div>
+  <div class="view">
+    <router-view />
+  </div>
   <var-tabs
     v-model:active="active"
     class="home-bar"
@@ -22,9 +32,14 @@ const routeTo = (path: string) => {
     fixed-bottom
     indicator-color="#00000000"
   >
-    <var-tab v-for="v in menuList" :name="v.name" :key="v.name" @click="routeTo(v.path)">
-      <var-icon class="icon" :name="v.meta.icon" />
-      <div>{{pack.layout[v.meta.title]}}</div>
+    <var-tab
+      v-for="route in routeList"
+      :key="route.name"
+      :name="route.name"
+      @click="routeTo(route.path)"
+    >
+      <var-icon class="icon" :name="route.meta?.icon" />
+      <div>{{ getRouteTitle(route.meta) }}</div>
     </var-tab>
   </var-tabs>
 </template>

@@ -1,4 +1,4 @@
-import type { PropType } from "vue"
+import type { PropType } from 'vue'
 
 export const proProps = {
   tabList: {
@@ -30,7 +30,7 @@ export const proProps = {
   onChange: {
     type: Function as PropType<(active: string | number) => void>
   },
-  "onUpdate:active": {
+  'onUpdate:active': {
     type: Function as PropType<(active: string | number) => void>
   }
 }

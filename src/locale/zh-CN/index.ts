@@ -1,10 +1,10 @@
-const files = import.meta.globEager("./*.ts")
+import dropdownMenu from './dropdownMenu'
+import example from './example'
+import layout from './layout'
+import notice from './notice'
+import searchBar from './searchBar'
+import tabbar from './tabbar'
 
-let zh_CN: Record<string, any> = {}
+const merge = { dropdownMenu, example, layout, notice, searchBar, tabbar }
 
-for (let file in files) {
-  const fileName = file.replace(/(\.\/|\.ts)/g, "") as string
-  zh_CN[fileName] = files[file].default
-}
-
-export default zh_CN
+export default merge
